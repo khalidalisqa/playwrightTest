@@ -5,6 +5,8 @@ test.only('has title', async ({ page }) => {
   await page.goto('https://demoqa.com/');
   const url = await page.url();
   console.log("URL is "+url);
+  const title = await page.title();
+  console.log("Page titile "+title);
   // Expect a title "to contain" a substring.
   //await expect(page).toHaveTitle(/Playwright/);
   await expect(true).toBeTruthy();
